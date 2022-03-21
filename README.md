@@ -1,6 +1,7 @@
 <a href="https://github.com/I-Aureate-I/BetterScps/releases/latest">
   <img src="https://img.shields.io/github/downloads/I-Aureate-I/BetterScps/total.svg" />
 </a>  
+
 ## BetterScps
 ### Description
 A plugin that allows SCP Objects to change their object to another as well as to learn information about other SCPs.
