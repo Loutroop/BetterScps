@@ -28,7 +28,7 @@ MessageIsForceAllowed: <i>You can use <color=#FF0000>.force</color> command to s
 MessageIsForceNotAllowed: <i>You can use <color=#FFFF00>.scps</color> command to find out the status of all objects</i>
 ```
 ### Plugin written on [Qurre](https://github.com/Qurre-Team/Qurre-sl).  
-<img src="https://cdn.fydne.xyz/qurre/Qurre-web_ol.gif" align="center" />
+<img src="https://cdn.fydne.xyz/qurre/Qurre-web_ol.gif" align="right" />
 <p>
    <a href="https://discord.gg/zGUqfJQebn" alt="Discord">
       <img src="https://discord.com/api/guilds/779412392651653130/embed.png" alt="Discord"/>
