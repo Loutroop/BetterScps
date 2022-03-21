@@ -1,6 +1,6 @@
 <a href="https://github.com/I-Aureate-I/BetterScps/releases/latest">
   <img src="https://img.shields.io/github/downloads/I-Aureate-I/BetterScps/total.svg" />
-</a>
+</a>  
 ## BetterScps
 ### Description
 A plugin that allows SCP Objects to change their object to another as well as to learn information about other SCPs.
@@ -26,7 +26,7 @@ MessageIsForceAllowed: <i>You can use <color=#FF0000>.force</color> command to s
 # The message when appearing for SCP if the time for changing the object has already passed.
 MessageIsForceNotAllowed: <i>You can use <color=#FFFF00>.scps</color> command to find out the status of all objects</i>
 ```
-### Plugin written on [Qurre](https://github.com/Qurre-Team/Qurre-sl).
+### Plugin written on [Qurre](https://github.com/Qurre-Team/Qurre-sl).  
 <img src="https://cdn.fydne.xyz/qurre/Qurre-web_ol.gif" align="center" />
 <p>
    <a href="https://discord.gg/zGUqfJQebn" alt="Discord">
