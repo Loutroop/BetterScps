@@ -6,8 +6,8 @@
 ### Описание
 Плагин позволяющий SCP-Объектам менять свой объект на другой, а также получать информацию о других объектах SCP.
 ### Установка
-* Перемистите `Qurre.Tools.dll` в `(.config or %AppData%)/Qurre/Plugins/dependencies`
-* Перемистите `BetterScps-Release.dll` или `BetterScps-Debug.dll` (будет писать отладку) в `(.config or %AppData%)/Qurre/Plugins`.
+* Переместите `Qurre.Tools.dll` в `(.config or %AppData%)/Qurre/Plugins/dependencies`
+* Переместите `BetterScps-Release.dll` или `BetterScps-Debug.dll` (будет писать отладку) в `(.config or %AppData%)/Qurre/Plugins`.
 ### Конфигурация
 ```yaml
 # Включен ли плагин?
