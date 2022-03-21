@@ -7,7 +7,7 @@
 A plugin that allows SCP Objects to change their object to another as well as to learn information about other SCPs.
 ### Installation
 * Move `Qurre.Tools.dll` into the `(.config or %AppData%)/Qurre/Plugins/dependencies`
-* Move `BetterScps-Release.dll` or `BetterScps-Debug.dll` into the `(.config or %AppData%)/Qurre/Plugins`.
+* Move `BetterScps-Release.dll` or `BetterScps-Debug.dll` (will write debug messages) into the `(.config or %AppData%)/Qurre/Plugins`.
 ### Config
 ```yaml
 # Whether the plugin is enabled.
