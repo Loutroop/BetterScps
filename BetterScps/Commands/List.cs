@@ -12,7 +12,7 @@ namespace BetterScps.Commands
     {
         public string Command => "scps";
 
-        public string[] Aliases => new string[3] { "allscps", "alivescps", "живыесцп" };
+        public string[] Aliases => new string[2] { "allscps", "alivescps" };
 
         public string Description => "Показывает всех живых SCP";
 

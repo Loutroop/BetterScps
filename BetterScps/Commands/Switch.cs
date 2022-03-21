@@ -12,7 +12,7 @@ namespace BetterScps.Commands
     {
         public string Command => "switch";
 
-        public string[] Aliases => new string[2] { "force", "change" };
+        public string[] Aliases => new string[3] { "force", "change", "scpswap" };
 
         public string Description => "Switching your object.";
 

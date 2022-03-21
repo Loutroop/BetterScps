@@ -35,7 +35,7 @@ namespace BetterScps
         [Description("The message when appearing for SCP if the time for changing the object has already passed.")]
         public string MessageIsForceNotAllowed { get; set; } = "<i>You can use <color=#FFFF00>.scps</color> command to find out the status of all objects</i>";
 
-        internal Config() => Instance = this;
+        public Config() => Instance = this;
 
         public static Config Instance { get; private set; }
     }
