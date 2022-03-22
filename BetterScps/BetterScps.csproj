@@ -54,6 +54,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Scp079Config.cs" />
     <Compile Include="Commands\List.cs" />
     <Compile Include="Commands\Switch.cs" />
     <Compile Include="EventHandlers.cs" />

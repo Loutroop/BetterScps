@@ -18,9 +18,9 @@ namespace BetterScps.Commands
 
         public bool Execute(ArraySegment<string> arguments, ICommandSender sender, out string response)
         {
-#if DEBUG
+            #if DEBUG
             Log.Debug("BetterScps switch command use");
-#endif
+            #endif
 
             if (arguments.Count is not 1)
             {

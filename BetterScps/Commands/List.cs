@@ -1,6 +1,8 @@
 ﻿using CommandSystem;
 using PlayableScps;
+using Qurre;
 using Qurre.API;
+using Qurre.API.Objects;
 using Qurre.Tools;
 using System;
 using System.Linq;
@@ -18,6 +20,10 @@ namespace BetterScps.Commands
 
         public bool Execute(ArraySegment<string> arguments, ICommandSender sender, out string response)
         {
+            #if DEBUG
+            Log.Debug("BetterScps switch command use");
+            #endif
+
             if (arguments.Count is not 0)
             {
                 response = "\nFor using you not need to enter arguments.";
@@ -55,9 +61,9 @@ namespace BetterScps.Commands
                     foreach (var scp in scps)
                     {
                         response += string.Format("{0} ({1}):\n", scp.Name(), scp.ScpNumber());
-                        response += string.Format("Location: {0} zone\n", scp.Role == RoleType.Scp079 ? scp.Scp079Controller.Camera.Room.Zone.ToString() : scp.Zone.ToString());
+                        response += string.Format("Location: {0} zone\n", scp.Role is RoleType.Scp079 ? scp.Scp079Controller.Camera.Room.Zone.ToString() : scp.Zone.ToString());
 
-                        if (user.Zone == scp.Zone)
+                        if (user.Zone == scp.Zone || (user.Zone is ZoneType.Heavy && scp.Zone is ZoneType.Office) || (scp.Zone is ZoneType.Heavy && user.Zone is ZoneType.Office))
                         {
                             response += string.Format("Distance: {0}m", user.DistanceTo(scp).ToString());
                         }
@@ -69,7 +75,7 @@ namespace BetterScps.Commands
                             response += string.Format("AHP: {0}/{1}\n", scp.Ahp, scp.MaxAhp);
                         }
 
-                        if (scp.Role == RoleType.Scp096)
+                        if (scp.Role is RoleType.Scp096)
                         {
                             Scp096 scp096 = scp.CurrentScp as Scp096;
                             response += string.Format("Status: {0}\n", scp096.Enraged ? "Enraged." : scp096.Enraging ? "Enraging" : "Calm");
@@ -80,14 +86,18 @@ namespace BetterScps.Commands
                                 response += string.Format("{0}\n", count == 0 ? "No live targets." : string.Format("Targets: {0}", count));
                             }
                         }
-                        else if (scp.Role == RoleType.Scp173)
+                        else if (scp.Role is RoleType.Scp173)
                         {
                             Scp173 scp173 = scp.CurrentScp as Scp173;
 
                             if (scp173._isObserved)
                                 response += string.Format("Observers: {0}\n", scp173._observingPlayers.Count);
                         }
-                        else if (scp.Role == RoleType.Scp079)
+                        else if (scp.Role is RoleType.Scp049 && BetterScps.EventHandlers.ZombiesCount.ContainsKey(scp))
+                        {
+                            response += string.Format("Revived by him:: {0} zombies", BetterScps.EventHandlers.ZombiesCount[scp]);
+                        }
+                        else if (scp.Scp079Controller.Is079)
                         {
                             response += string.Format("Access level: {0}\n", scp.Scp079Controller.Lvl);
                             response += string.Format("Available energy: {0}/{1}\n", scp.Scp079Controller.Energy, scp.Scp079Controller.MaxEnergy);
