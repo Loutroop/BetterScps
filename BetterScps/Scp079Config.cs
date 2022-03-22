@@ -52,7 +52,7 @@ namespace BetterScps
         [Description("Power cost on blackout in a room.")]
         public int Blackout { get; set; } = 60;
 
-        [Description("Instant trigger of the tesla on interact")]
+        [Description("Instant trigger of the tesla on interact?")]
         public bool InstantTesla { get; set; } = false;
     }
 }
