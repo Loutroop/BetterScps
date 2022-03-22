@@ -1,6 +1,12 @@
-<a href="https://github.com/I-Aureate-I/BetterScps/releases/latest">
-  <img src="https://img.shields.io/github/downloads/I-Aureate-I/BetterScps/total.svg" />
-</a>  
+<img src="https://cdn.fydne.xyz/qurre/Qurre-web_ol.gif" align="right" />
+<p>
+   <a href="https://github.com/I-Aureate-I/BetterScps/releases/latest">
+     <img src="https://img.shields.io/github/downloads/I-Aureate-I/BetterScps/total.svg" />
+   </a>
+   <a href="https://github.com/I-Aureate-I/BetterScps/commits/master">
+     <img src="https://img.shields.io/github/commits-since/I-Aureate-I/BetterScps/latest?include_prereleases" />
+   </a>
+</p>
 
 ## BetterScps
 ### Описание
