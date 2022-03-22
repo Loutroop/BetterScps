@@ -15,6 +15,7 @@
 * 移动 `Qurre.Tools.dll` 至`(.config or %AppData%)/Qurre/Plugins/dependencies`
 * 移动`BetterScps-Release.dll`或者`BetterScps-Debug.dll` (将编写调试消息)至 `(.config or %AppData%)/Qurre/Plugins`.
 ### 配置
+```yaml
 # 插件是否启用
 IsEnabled: true
 # 允许更改对象的时间（以秒为单位）
@@ -31,6 +32,7 @@ LimitedScps:
 MessageIsForceAllowed: <i>You can use <color=#FF0000>.force</color> command to switch your object or <color=#FFFF00>.scps</color> command to find out the status of all objects</i>
 # 如果更改对象的时间已经过去，则出现SCP时的消息
 MessageIsForceNotAllowed: <i>You can use <color=#FFFF00>.scps</color> command to find out the status of all objects</i>
+```
 ### 插件使用[Qurre]进行编写(https://github.com/Qurre-Team/Qurre-sl).  
 <p>
  <a href="https://discord.gg/zGUqfJQebn" alt="Discord">
