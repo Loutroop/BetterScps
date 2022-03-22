@@ -1,3 +1,13 @@
+<img src="https://cdn.fydne.xyz/qurre/Qurre-web_ol.gif" align="right" />
+<p>
+   <a href="https://github.com/I-Aureate-I/BetterScps/releases/latest">
+     <img src="https://img.shields.io/github/downloads/I-Aureate-I/BetterScps/total.svg" />
+   </a>
+   <a href="https://github.com/I-Aureate-I/BetterScps/commits/master">
+     <img src="https://img.shields.io/github/commits-since/I-Aureate-I/BetterScps/latest?include_prereleases" />
+   </a>
+</p>
+
 ## BetterScps
 ### 描述
 一个插件，允许SCP对象将其对象更改为另一个对象，以及了解有关其他SCP的信息。
