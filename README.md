@@ -70,7 +70,7 @@ Scp079:
   ActivateTesla: 50
   # Power cost on blackout in a room.
   Blackout: 60
-  # Instant trigger of the tesla on interact
+  # Instant trigger of the tesla on interact?
   InstantTesla: false
 ```
 ### Plugin written on [Qurre](https://github.com/Qurre-Team/Qurre-sl).  
