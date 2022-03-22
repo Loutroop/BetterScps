@@ -32,6 +32,46 @@ LimitedScps:
 MessageIsForceAllowed: <i>You can use <color=#FF0000>.force</color> command to switch your object or <color=#FFFF00>.scps</color> command to find out the status of all objects</i>
 # The message when appearing for SCP if the time for changing the object has already passed.
 MessageIsForceNotAllowed: <i>You can use <color=#FFFF00>.scps</color> command to find out the status of all objects</i>
+# SCP-079 configuration
+Scp079:
+# Power cost on open a door.
+  OpenDoor:
+    Default: 5
+    Chkp: 10
+    Scps: 40
+    Scp914: 50
+    ArmoryDef: 50
+    WarheadArmor: 60
+    Gates: 60
+    SurfaceGate: 60
+    MicroHidRoom: 70
+    Scp079andScp106: 110
+    SurfaceWarhead: 110
+  # Power cost on close a door.
+  CloseDoor:
+    Default: 5
+    Chkp: 10
+    Scps: 40
+    Scp914: 50
+    ArmoryDef: 50
+    WarheadArmor: 60
+    Gates: 60
+    SurfaceGate: 60
+    MicroHidRoom: 70
+    Scp079andScp106: 110
+    SurfaceWarhead: 110
+  # Power cost on interact with lift.
+  InteractLift: 10
+  # Power cost on change camera.
+  ChangeCamera: 10
+  # Power cost on elevator teleport.
+  ElevatorTeleport: 20
+  # Power cost on activate a tesla.
+  ActivateTesla: 50
+  # Power cost on blackout in a room.
+  Blackout: 60
+  # Instant trigger of the tesla on interact
+  InstantTesla: false
 ```
 ### Plugin written on [Qurre](https://github.com/Qurre-Team/Qurre-sl).  
 <p>
