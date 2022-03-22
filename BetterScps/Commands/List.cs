@@ -95,7 +95,7 @@ namespace BetterScps.Commands
                         }
                         else if (scp.Role is RoleType.Scp049 && BetterScps.EventHandlers.ZombiesCount.ContainsKey(scp))
                         {
-                            response += string.Format("Revived by him:: {0} zombies", BetterScps.EventHandlers.ZombiesCount[scp]);
+                            response += string.Format("Revived by him: {0} zombies", BetterScps.EventHandlers.ZombiesCount[scp]);
                         }
                         else if (scp.Scp079Controller.Is079)
                         {
