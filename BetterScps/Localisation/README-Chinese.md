@@ -32,6 +32,46 @@ LimitedScps:
 MessageIsForceAllowed: <i>You can use <color=#FF0000>.force</color> command to switch your object or <color=#FFFF00>.scps</color> command to find out the status of all objects</i>
 # 如果更改对象的时间已经过去，则出现SCP时的消息
 MessageIsForceNotAllowed: <i>You can use <color=#FFFF00>.scps</color> command to find out the status of all objects</i>
+# SCP-079 configuration
+Scp079:
+# 开门时消耗的电力
+  OpenDoor:
+    Default: 5
+    Chkp: 10
+    Scps: 40
+    Scp914: 50
+    ArmoryDef: 50
+    WarheadArmor: 60
+    Gates: 60
+    SurfaceGate: 60
+    MicroHidRoom: 70
+    Scp079andScp106: 110
+    SurfaceWarhead: 110
+  # 锁门时消耗的电力
+  CloseDoor:
+    Default: 5
+    Chkp: 10
+    Scps: 40
+    Scp914: 50
+    ArmoryDef: 50
+    WarheadArmor: 60
+    Gates: 60
+    SurfaceGate: 60
+    MicroHidRoom: 70
+    Scp079andScp106: 110
+    SurfaceWarhead: 110
+  # 与电梯进行互动时所消耗的电力
+  InteractLift: 10
+  # 改变摄像头所消耗的电力
+  ChangeCamera: 10
+  # 传送至另一个收容区（原文: 传送电梯）所消耗的电梯
+  ElevatorTeleport: 20
+  # 使特斯拉活动（电人）所消耗的电力
+  ActivateTesla: 50
+  # 关一个房间的灯所消耗的电力
+  Blackout: 60
+  # 特斯拉在互动上的即时触发?
+  InstantTesla: false
 ```
 ### 插件使用[Qurre]进行编写(https://github.com/Qurre-Team/Qurre-sl).  
 <p>
