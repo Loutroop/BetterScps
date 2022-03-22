@@ -14,13 +14,13 @@ namespace BetterScps.Commands
 
         public string[] Aliases => new string[2] { "allscps", "alivescps" };
 
-        public string Description => "Показывает всех живых SCP";
+        public string Description => "Get information of all alive SCPs.";
 
         public bool Execute(ArraySegment<string> arguments, ICommandSender sender, out string response)
         {
             if (arguments.Count is not 0)
             {
-                response = "\nFor use, you not need to enter arguments.";
+                response = "\nFor using you not need to enter arguments.";
                 return false;
             }
 
@@ -42,19 +42,26 @@ namespace BetterScps.Commands
             {
                 response = string.Empty;
 
-                var scps = Player.List.Where(x => x.IsScp() && x != user);
+                var scps = Player.List.Where(ply => ply.IsScp() && ply != user);
 
-                if (scps.Count() == 0)
+                if (scps.Count() <= 0)
                 {
                     response += "\nYou are the only SCP, but we still believe that you will win!"; 
                     return true;
                 }
                 else
                 {
+                    response += string.Format("SCPs count: {0}", scps.Count());
                     foreach (var scp in scps)
                     {
                         response += string.Format("{0} ({1}):\n", scp.Name(), scp.ScpNumber());
-                        response += string.Format("Location: {0}\n", scp.Role == RoleType.Scp079 ? scp.Scp079Controller.Camera.Room.Zone.ToString() : scp.Zone.ToString());
+                        response += string.Format("Location: {0} zone\n", scp.Role == RoleType.Scp079 ? scp.Scp079Controller.Camera.Room.Zone.ToString() : scp.Zone.ToString());
+
+                        if (user.Zone == scp.Zone)
+                        {
+                            response += string.Format("Distance: {0}m", user.DistanceTo(scp).ToString());
+                        }
+
                         response += string.Format("HP: {0}/{1}\n", scp.Hp, scp.MaxHp);
                         
                         if (scp.MaxAhp > 0)

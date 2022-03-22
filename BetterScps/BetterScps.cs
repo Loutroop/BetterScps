@@ -8,9 +8,9 @@ namespace BetterScps
     {
         public override string Name => "BetterScps";
 
-        public override string Developer => "Aureate#2824";
+        public override string Developer => "Qurre Team (Aureate#2824)";
 
-        public override Version Version => new(1, 0, 1);
+        public override Version Version => new(1, 0, 2);
 
         public override Version NeededQurreVersion => new(1, 13, 0);
 

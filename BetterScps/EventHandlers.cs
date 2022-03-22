@@ -11,22 +11,12 @@ namespace BetterScps
         {
             if (ev.NewRole.IsScp() && ev.Allowed)
             {
-                if (Round.ElapsedTime.TotalSeconds <= Config.Instance.Time)
-                {
-                    ev.Player.Broadcast(Config.Instance.MessageIsForceAllowed, 10);
+                bool forceAllowed = Round.ElapsedTime.TotalSeconds <= Config.Instance.Time;
+                ev.Player.Broadcast(forceAllowed ? Config.Instance.MessageIsForceAllowed : Config.Instance.MessageIsForceNotAllowed, (ushort)(forceAllowed ? 10 : 8));
 
-#if DEBUG
-                    Log.Debug(string.Format("{0} role changed to {1}, force is allowed", ev.Player.Name(), ev.Player.Role));
-#endif
-                }
-                else
-                {
-                    ev.Player.Broadcast(Config.Instance.MessageIsForceNotAllowed, 8);
-
-#if DEBUG
-                    Log.Debug(string.Format("{0} role changed to {1}, force is not allowed", ev.Player.Name(), ev.Player.Role));
-#endif
-                }
+                #if DEBUG
+                Log.Debug(string.Format("{0} role changed to {1}, force is {2}", ev.Player.Name(), ev.Player.Role, forceAllowed ? "allowed" : "not allowed"));
+                #endif
             }
         }
     }
