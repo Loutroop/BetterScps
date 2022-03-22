@@ -29,9 +29,49 @@ LimitedScps:
 - Scp079
 - Scp173
 # Сообщение при появлении для SCP, если время для смены объекта еще не прошло.
-MessageIsForceAllowed: <i>You can use <color=#FF0000>.force</color> command to switch your object or <color=#FFFF00>.scps</color> command to find out the status of all objects</i>
+MessageIsForceAllowed: <i>Вы можете использовать команду <color=#FF0000>.force</color> для смены своего объекта или команду <color=#FFFF00>.scps</color> чтобы узнать состояние всех объектов</i>
 # Сообщение при появлении для SCP, если время для смены объекта уже прошло.
-MessageIsForceNotAllowed: <i>You can use <color=#FFFF00>.scps</color> command to find out the status of all objects</i>
+MessageIsForceNotAllowed: <i>Вы можете использовать команду <color=#FFFF00>.scps</color> чтобы узнать состояние всех объектов</i>
+# Конфигурация SCP-079
+Scp079:
+# Стоимость открытия двери.
+  OpenDoor:
+    Default: 5
+    Chkp: 10
+    Scps: 40
+    Scp914: 50
+    ArmoryDef: 50
+    WarheadArmor: 60
+    Gates: 60
+    SurfaceGate: 60
+    MicroHidRoom: 70
+    Scp079andScp106: 110
+    SurfaceWarhead: 110
+  # Стоимость закрытия двери.
+  CloseDoor:
+    Default: 5
+    Chkp: 10
+    Scps: 40
+    Scp914: 50
+    ArmoryDef: 50
+    WarheadArmor: 60
+    Gates: 60
+    SurfaceGate: 60
+    MicroHidRoom: 70
+    Scp079andScp106: 110
+    SurfaceWarhead: 110
+  # Стоимость взаимодействия с лифтом.
+  InteractLift: 10
+  # Стоимость смены камеры.
+  ChangeCamera: 10
+  # Стоимость смены зоны.
+  ElevatorTeleport: 20
+  # Стоимость активации Тесла-ворот.
+  ActivateTesla: 50
+  # Стоимость blackout'а.
+  Blackout: 60
+  # Мгновенное включение тесла-ворот при взаимодействии?
+  InstantTesla: false
 ```
 ### Плагин написан на [Qurre](https://github.com/Qurre-Team/Qurre-sl).  
 <p>
